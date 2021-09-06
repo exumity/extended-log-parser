@@ -1,0 +1,51 @@
+{
+  "name": "extended-log-parser",
+  "version": "1.0.0",
+  "description": "W3C Extended Log Parser",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exumity/extended-log-parser.git"
+  },
+  "keywords": [
+    "extended",
+    "log",
+    "parser"
+  ],
+  "author": "Halil Savaşcı",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exumity/extended-log-parser/issues"
+  },
+  "homepage": "https://github.com/exumity/extended-log-parser#readme",
+  "devDependencies": {
+    "jest": "27.1.0",
+    "@types/jest": "27.0.1",
+    "ts-jest": "27.0.5",
+    "ts-node": "10.2.1",
+    "typescript": "4.4.2"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 1,
+        "functions": 1,
+        "lines": 1,
+        "statements": 1
+      }
+    }
+  }
+}
