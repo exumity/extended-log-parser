@@ -2,21 +2,29 @@
   "name": "extended-log-parser",
   "version": "1.0.0",
   "description": "W3C Extended Log Parser",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/exumity/extended-log-parser.git"
   },
   "keywords": [
+    "w3c",
     "extended",
     "log",
-    "parser"
+    "parser",
+    "parse"
   ],
   "author": "Halil Savaşcı",
   "license": "ISC",

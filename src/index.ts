@@ -16,8 +16,8 @@ export default class ExtendedLogParser {
      * @param log - log string
      * @param delimiter - field delimiter @default=whitespace
      */
-    static parse(log: string, delimiter: string = " ") {
-        const logs: object[] = []
+    static parse<T>(log: string, delimiter: string = " "): any[] {
+        const logs: any[] = []
         const lines: string[] = log.split('\n')
 
         const headers = this.getHeaders(lines)
@@ -52,7 +52,7 @@ export default class ExtendedLogParser {
 
     private static lineToObject(line: string, fields: string[], delimiter: string) {
         const columns = line.trim().split(delimiter)
-        const result: object = {}
+        const result: any = {}
         for (let i = 0; i < fields.length; i++) {
             result[fields[i]] = columns[i]
         }
